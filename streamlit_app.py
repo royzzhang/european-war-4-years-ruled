@@ -57,15 +57,15 @@ rounds = st.number_input('Round', min_value=1, max_value=300, value=1)
 
 europe_america_rounds_score = 90960
 if rounds > 31:
-    europe_america_rounds_score -= (1716 + (min(45, rounds) - 31) * 832.5) * 2
+    europe_america_rounds_score -= (1716 + (min(45, rounds) - 31 - 1) * 832.5) * 2
 if rounds > 45:
-    europe_america_rounds_score -= (8326 + (min(55, rounds) - 45) * 693.75) * 2
+    europe_america_rounds_score -= (8326 + (min(55, rounds) - 45 - 1) * 693.75) * 2
 if rounds > 55:
-    europe_america_rounds_score -= (6798 + (min(65, rounds) - 55) * 555) * 2
+    europe_america_rounds_score -= (6798 + (min(65, rounds) - 55 - 1) * 555) * 2
 if rounds > 65:
-    europe_america_rounds_score -= (5272 + (min(75, rounds) - 65) * 416.25) * 2
+    europe_america_rounds_score -= (5272 + (min(75, rounds) - 65 - 1) * 416.25) * 2
 if rounds > 75:
-    europe_america_rounds_score -= (3746 + (min(100, rounds) - 75) * 277.5) * 2
+    europe_america_rounds_score -= (3746 + (min(100, rounds) - 75 - 1) * 277.5) * 2
 
 asia_rounds_score = -52500
 if rounds <= 20:
