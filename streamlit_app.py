@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.header('European War 4 Years Ruled Calculation')
+st.header('European War 4 Years Ruled Calculator')
 
 continent = st.segmented_control('Conquest Map', ['Europe', 'America'], default='Europe')
 
