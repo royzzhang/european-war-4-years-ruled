@@ -89,7 +89,28 @@ europe_america_score = (resource_score + europe_america_star_score + europe_amer
                         europe_america_headquarter_score) / 186.6
 asia_score = (resource_score + asia_star_score + asia_rounds_score + asia_headquarter_score) / 280
 
+princesses = []
+if continent == 'America' and europe_america_score >= 450:
+    princesses.append('Kate')
+elif continent == 'Europe':
+    if europe_america_score >= 250:
+        princesses.append('Sophia')
+    if europe_america_score >= 400:
+        princesses.append('Fatimah')
+    if europe_america_score >= 550:
+        princesses.append('Maria')
+    if europe_america_score >= 700:
+        princesses.append('Isabela')
+    if europe_america_score >= 850:
+        princesses.append('Victoria')
+if asia_score >= 550:
+    princesses.append('Lan')
+if asia_score >= 350:
+    princesses.append('Sakurako')
+
+
 st.text(f'Years Ruled ({continent}, real): {europe_america_score}')
 st.text(f'Years Ruled (Asia, real): {asia_score}')
-st.text(f'Years Ruled ({continent}, displayed): {max(0, int(europe_america_score / 50) * 50)}')
-st.text(f'Years Ruled (Asia, displayed): {max(0, int(asia_score / 50) * 50)}')
+st.text(f'Years Ruled ({continent}, displayed): {max(10, int(europe_america_score / 50) * 50)}')
+st.text(f'Years Ruled (Asia, displayed): {max(10, int(asia_score / 50) * 50)}')
+st.text('Princesses you can get: {}'.format(', '.join(princesses) if princesses else None))
